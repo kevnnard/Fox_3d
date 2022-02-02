@@ -1,0 +1,368 @@
+/* tooltips **/ 
+  section {
+     user-select: none;
+     margin-top: 25px;
+    width: 100%;
+    /*display: grid;*/
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+    /*overflow-x: hidden;*/
+  }
+  @media (max-width: 768px){
+  	section {
+    	height: auto;
+      	grid-template-columns: 1fr;
+    }
+  }
+  .container {
+    
+    margin: 0 auto;
+    position: relative;
+  }
+  .container img {
+    height: 100%;
+    width: 100%;
+  }
+  .all-tooltiiiiip {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+  }
+  
+  .tooltiiiiip-content {
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 20px #00000020;
+    padding: 30px;
+    border-radius: 8px;
+    width: 90vw;
+    max-width: 300px;
+    opacity: 0;
+    pointer-events: none;
+    /* left: -50%; */
+    z-index: 2;
+  }
+  .tooltiiiiip-content .arrow {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border: 10px solid transparent;
+    border-bottom-color: rgb(255, 255, 255);
+    top: 0px;
+    left: 50%;
+    transform: translate(-50%, -100%) rotate(0deg);
+  }
+  .pin {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 80%;
+    height: 25px;
+    width: 25px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .pin:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    animation: puls-effect 1s ease infinite;
+  }
+  .tooltiiiiip.active .tooltiiiiip-content {
+    opacity: 1;
+    pointer-events: all;
+    display: block;
+  }
+  
+  /* Custom Style for tooltiiiiip-1 */
+  
+  .tooltiiiiip-1 .pin {
+    top: 25%; 
+    left: 50%;
+    height: 15px;
+    width: 15px;
+    background-color: rgb(255, 255, 255);
+  }
+  .tooltiiiiip-1 .tooltiiiiip-content {
+    display: flex;
+    max-width: 450px;
+    align-items: stretch;
+    justify-content: space-around;
+    padding: 0;
+    background-color: aliceblue;
+  }
+  .tooltiiiiip-1.active .tooltiiiiip-content {
+    display: flex;
+  }
+  .tooltiiiiip-1 .tooltiiiiip-content .img {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+  }
+  .tooltiiiiip-1 .tooltiiiiip-content .img > img {
+  	width: 100%;
+    height: auto;
+  }
+  .tooltiiiiip-1 .tooltiiiiip-content .content {
+    width: 50%;
+    padding: 20px;
+  }
+  .tooltiiiiip-1 .tooltiiiiip-content .content h1 {
+    font-size: 24px;
+  }
+  .tooltiiiiip-1 .tooltiiiiip-content .content p {
+    font-size: 14px;
+  }
+  /*.tooltiiiiip-1 .tooltiiiiip-content .content button {
+    font-family: "Montserrat";
+    font-size: 18px;
+    font-weight: 400;
+    border: none;
+    outline: none;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 4px;
+    box-shadow: 0px 0px 20px #00000020;
+  }*/
+  
+  /* custom style for tooltiiiiip-2 */
+  
+  .tooltiiiiip-2 .pin {
+    top: 55%;
+    left: 74%;
+    height: 15px;
+    width: 15px;
+  }
+  .tooltiiiiip-2 .tooltiiiiip-content {
+    display: flex;
+    max-width: 450px;
+    align-items: stretch;
+    justify-content: space-around;
+    padding: 0;
+    background-color: aliceblue;
+  }
+  .tooltiiiiip-2.active .tooltiiiiip-content {
+    display: flex;
+  }
+  .tooltiiiiip-2 .tooltiiiiip-content .img {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+  }
+  .tooltiiiiip-2 .tooltiiiiip-content .img > img {
+  	width: 100%;
+    height: auto;
+  }
+  .tooltiiiiip-2 .tooltiiiiip-content .content {
+    width: 50%;
+    padding: 20px;
+  }
+  .tooltiiiiip-2 .tooltiiiiip-content .content h1 {
+    font-size: 24px;
+  }
+  .tooltiiiiip-2.tooltiiiiip-content .content p {
+    font-size: 14px;
+  }
+  
+  /* Custom style for tooltiiiiip-3 */
+  
+  .tooltiiiiip-3 .pin {
+    top: 45%;
+    left: 40%;
+    height: 15px;
+    width: 15px;
+  }
+  
+  .tooltiiiiip-3 .tooltiiiiip-content {
+    display: flex;
+    max-width: 450px;
+    align-items: stretch;
+    justify-content: space-around;
+    padding: 0;
+    background-color: aliceblue;
+  }
+  .tooltiiiiip-3.active .tooltiiiiip-content {
+    display: flex;
+  }
+  .tooltiiiiip-3 .tooltiiiiip-content .img {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+  }
+  .tooltiiiiip-3 .tooltiiiiip-content .img > img {
+  	width: 100%;
+    height: auto;
+  }
+  .tooltiiiiip-3 .tooltiiiiip-content .content {
+    width: 50%;
+    padding: 20px;
+  }
+  .tooltiiiiip-3 .tooltiiiiip-content .content h1 {
+    font-size: 24px;
+  }
+  .tooltiiiiip-3.tooltiiiiip-content .content p {
+    font-size: 14px;
+  }
+  /* Custom style for tooltiiiiip-4 */
+  
+  .tooltiiiiip-4 .pin {
+    top: 60%;
+    left: 47%;
+    height: 15px;
+    width: 15px;
+  }
+  
+  .tooltiiiiip-4 .tooltiiiiip-content {
+    display: flex;
+    max-width: 450px;
+    align-items: stretch;
+    justify-content: space-around;
+    padding: 0;
+    background-color: aliceblue;
+  }
+  .tooltiiiiip-4.active .tooltiiiiip-content {
+    display: flex;
+  }
+  .tooltiiiiip-4 .tooltiiiiip-content .img {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+  }
+  .tooltiiiiip-4 .tooltiiiiip-content .img > img {
+  	width: 100%;
+    height: auto;
+  }
+  .tooltiiiiip-4 .tooltiiiiip-content .content {
+    width: 50%;
+    padding: 20px;
+  }
+  .tooltiiiiip-4 .tooltiiiiip-content .content h1 {
+    font-size: 24px;
+  }
+  .tooltiiiiip-4.tooltiiiiip-content .content p {
+    font-size: 14px;
+  }
+  
+  
+  /* Custom style for tooltiiiiip-5 */
+  
+  .tooltiiiiip-5 .pin {
+    top: 60%;
+    left: 11%;
+    height: 15px;
+    width: 15px;
+  }
+  
+  .tooltiiiiip-5 .tooltiiiiip-content {
+    display: flex;
+    max-width: 450px;
+    align-items: stretch;
+    justify-content: space-around;
+    padding: 0;
+    background-color: aliceblue;
+  }
+  .tooltiiiiip-5.active .tooltiiiiip-content {
+    display: flex;
+  }
+  .tooltiiiiip-5 .tooltiiiiip-content .img {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+  }
+  .tooltiiiiip-5 .tooltiiiiip-content .img > img {
+  	width: 100%;
+    height: auto;
+  }
+  .tooltiiiiip-5 .tooltiiiiip-content .content {
+    width: 50%;
+    padding: 20px;
+  }
+  .tooltiiiiip-5 .tooltiiiiip-content .content h1 {
+    font-size: 24px;
+  }
+  .tooltiiiiip-5.tooltiiiiip-content .content p {
+    font-size: 14px;
+  }
+  /* Puls Effect For Pins */
+  
+  @keyframes puls-effect {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(3);
+      opacity: 0;
+    }
+  }
+  
+  /* Media Query */
+  
+@media (max-width: 768px) {
+    .tooltiiiiip-content {
+      flex-direction: column;
+      width: 250px;
+    }
+    .tooltiiiiip-content .content,
+    .tooltiiiiip-content .img {
+      max-width: 100%;
+    }
+  .tooltiiiiip-1.active .tooltiiiiip-content{
+    	justify-content: center;
+    	align-items: center;
+    }
+  .tooltiiiiip-2.active .tooltiiiiip-content{
+    	justify-content: center;
+    	align-items: center;
+    }
+  .tooltiiiiip-3.active .tooltiiiiip-content{
+    	justify-content: center;
+    	align-items: center;
+    }
+  .tooltiiiiip-4.active .tooltiiiiip-content{
+    	justify-content: center;
+    	align-items: center;
+    }
+  .tooltiiiiip-5.active .tooltiiiiip-content{
+    	justify-content: center;
+    	align-items: center;
+    }
+  .tooltiiiiip-1 .tooltiiiiip-content .content {
+    width: 100%;
+  }
+  .tooltiiiiip-2 .tooltiiiiip-content .content {
+    width: 100%;
+  }
+  .tooltiiiiip-3 .tooltiiiiip-content .content {
+    width: 100%;
+  }
+  .tooltiiiiip-4 .tooltiiiiip-content .content {
+    width: 100%;
+  }
+  .tooltiiiiip-5 .tooltiiiiip-content .content {
+    width: 100%;
+  }
+  
+}

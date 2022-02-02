@@ -1,0 +1,29 @@
+{
+  "name": "fox-3d",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/react-fontawesome": "^0.1.16",
+    "@react-three/drei": "^8.3.1",
+    "clsx": "^1.1.1",
+    "dat.gui": "^0.7.7",
+    "expo-font": "^10.0.4",
+    "gsap": "^3.9.1",
+    "next": "^12.0.7",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-fast-marquee": "^1.3.1",
+    "react-three-fiber": "^6.0.13",
+    "three": "^0.136.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^1.0.7",
+    "vite": "^2.7.2"
+  }
+}

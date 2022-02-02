@@ -1,0 +1,18 @@
+.play {
+  background: transparent;
+  background-image: url(/img/play.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 10%;
+  width: 100%;
+}
+.play:hover {
+  opacity: 0.4;
+}
+.hidden {
+  opacity: 0.08;
+}
+.hidden2 {
+    opacity: 0.09;
+}

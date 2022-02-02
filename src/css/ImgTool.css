@@ -1,0 +1,368 @@
+/* tooltips **/ 
+  section {
+     user-select: none;
+     margin-top: 25px;
+    width: 100%;
+    /*display: grid;*/
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+    /*overflow-x: hidden;*/
+  }
+  @media (max-width: 768px){
+  	section {
+    	height: auto;
+      	grid-template-columns: 1fr;
+    }
+  }
+  .container {
+    
+    margin: 0 auto;
+    position: relative;
+  }
+  .container img {
+    height: 100%;
+    width: 100%;
+  }
+  .all-tooltiip {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+  }
+  
+  .tooltiip-content {
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 20px #00000020;
+    padding: 30px;
+    border-radius: 8px;
+    width: 90vw;
+    max-width: 300px;
+    opacity: 0;
+    pointer-events: none;
+    /* left: -50%; */
+    z-index: 2;
+  }
+  .tooltiip-content .arrowe {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border: 10px solid transparent;
+    border-bottom-color: rgb(255, 255, 255);
+    top: 0px;
+    left: 50%;
+    transform: translate(-50%, -100%) rotate(0deg);
+  }
+  .pin {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 80%;
+    height: 25px;
+    width: 25px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .pin:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    animation: puls-effect 1s ease infinite;
+  }
+  .tooltiip.active .tooltiip-content {
+    opacity: 1;
+    pointer-events: all;
+    display: block;
+  }
+  
+  /* Custom Style for tooltiip-1 */
+  
+  .tooltiip-1 .pin {
+    top: 75%; 
+    left: 48%;
+    height: 15px;
+    width: 15px;
+    background-color: rgb(255, 255, 255);
+  }
+  .tooltiip-1 .tooltiip-content {
+    display: flex;
+    max-width: 450px;
+    align-items: stretch;
+    justify-content: space-around;
+    padding: 0;
+    background-color: aliceblue;
+  }
+  .tooltiip-1.active .tooltiip-content {
+    display: flex;
+  }
+  .tooltiip-1 .tooltiip-content .img {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+  }
+  .tooltiip-1 .tooltiip-content .img > img {
+  	width: 100%;
+    height: auto;
+  }
+  .tooltiip-1 .tooltiip-content .content {
+    width: 50%;
+    padding: 20px;
+  }
+  .tooltiip-1 .tooltiip-content .content h1 {
+    font-size: 24px;
+  }
+  .tooltiip-1 .tooltiip-content .content p {
+    font-size: 14px;
+  }
+  /*.tooltiip-1 .tooltiip-content .content button {
+    font-family: "Montserrat";
+    font-size: 18px;
+    font-weight: 400;
+    border: none;
+    outline: none;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 4px;
+    box-shadow: 0px 0px 20px #00000020;
+  }*/
+  
+  /* custom style for tooltiip-2 */
+  
+  .tooltiip-2 .pin {
+    top: 37%;
+    left: 41%;
+    height: 15px;
+    width: 15px;
+  }
+  .tooltiip-2 .tooltiip-content {
+    display: flex;
+    max-width: 450px;
+    align-items: stretch;
+    justify-content: space-around;
+    padding: 0;
+    background-color: aliceblue;
+  }
+  .tooltiip-2.active .tooltiip-content {
+    display: flex;
+  }
+  .tooltiip-2 .tooltiip-content .img {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+  }
+  .tooltiip-2 .tooltiip-content .img > img {
+  	width: 100%;
+    height: auto;
+  }
+  .tooltiip-2 .tooltiip-content .content {
+    width: 50%;
+    padding: 20px;
+  }
+  .tooltiip-2 .tooltiip-content .content h1 {
+    font-size: 24px;
+  }
+  .tooltiip-2.tooltiip-content .content p {
+    font-size: 14px;
+  }
+  
+  /* Custom style for tooltiip-3 */
+  
+  .tooltiip-3 .pin {
+    top: 22%;
+    left: 57%;
+    height: 15px;
+    width: 15px;
+  }
+  
+  .tooltiip-3 .tooltiip-content {
+    display: flex;
+    max-width: 450px;
+    align-items: stretch;
+    justify-content: space-around;
+    padding: 0;
+    background-color: aliceblue;
+  }
+  .tooltiip-3.active .tooltiip-content {
+    display: flex;
+  }
+  .tooltiip-3 .tooltiip-content .img {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+  }
+  .tooltiip-3 .tooltiip-content .img > img {
+  	width: 100%;
+    height: auto;
+  }
+  .tooltiip-3 .tooltiip-content .content {
+    width: 50%;
+    padding: 20px;
+  }
+  .tooltiip-3 .tooltiip-content .content h1 {
+    font-size: 24px;
+  }
+  .tooltiip-3.tooltiip-content .content p {
+    font-size: 14px;
+  }
+  /* Custom style for tooltiip-4 */
+  
+  .tooltiip-4 .pin {
+    top: 42%;
+    left: 69%;
+    height: 15px;
+    width: 15px;
+  }
+  
+  .tooltiip-4 .tooltiip-content {
+    display: flex;
+    max-width: 450px;
+    align-items: stretch;
+    justify-content: space-around;
+    padding: 0;
+    background-color: aliceblue;
+  }
+  .tooltiip-4.active .tooltiip-content {
+    display: flex;
+  }
+  .tooltiip-4 .tooltiip-content .img {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+  }
+  .tooltiip-4 .tooltiip-content .img > img {
+  	width: 100%;
+    height: auto;
+  }
+  .tooltiip-4 .tooltiip-content .content {
+    width: 50%;
+    padding: 20px;
+  }
+  .tooltiip-4 .tooltiip-content .content h1 {
+    font-size: 24px;
+  }
+  .tooltiip-4.tooltiip-content .content p {
+    font-size: 14px;
+  }
+  
+  
+  /* Custom style for tooltiip-5 */
+  
+  .tooltiip-5 .pin {
+    top: 60%;
+    left: 11%;
+    height: 15px;
+    width: 15px;
+  }
+  
+  .tooltiip-5 .tooltiip-content {
+    display: flex;
+    max-width: 450px;
+    align-items: stretch;
+    justify-content: space-around;
+    padding: 0;
+    background-color: aliceblue;
+  }
+  .tooltiip-5.active .tooltiip-content {
+    display: flex;
+  }
+  .tooltiip-5 .tooltiip-content .img {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+  }
+  .tooltiip-5 .tooltiip-content .img > img {
+  	width: 100%;
+    height: auto;
+  }
+  .tooltiip-5 .tooltiip-content .content {
+    width: 50%;
+    padding: 20px;
+  }
+  .tooltiip-5 .tooltiip-content .content h1 {
+    font-size: 24px;
+  }
+  .tooltiip-5.tooltiip-content .content p {
+    font-size: 14px;
+  }
+  /* Puls Effect For Pins */
+  
+  @keyframes puls-effect {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(3);
+      opacity: 0;
+    }
+  }
+  
+  /* Media Query */
+  
+@media (max-width: 768px) {
+    .tooltiip-content {
+      flex-direction: column;
+      width: 250px;
+    }
+    .tooltiip-content .content,
+    .tooltiip-content .img {
+      max-width: 100%;
+    }
+  .tooltiip-1.active .tooltiip-content{
+    	justify-content: center;
+    	align-items: center;
+    }
+  .tooltiip-2.active .tooltiip-content{
+    	justify-content: center;
+    	align-items: center;
+    }
+  .tooltiip-3.active .tooltiip-content{
+    	justify-content: center;
+    	align-items: center;
+    }
+  .tooltiip-4.active .tooltiip-content{
+    	justify-content: center;
+    	align-items: center;
+    }
+  .tooltiip-5.active .tooltiip-content{
+    	justify-content: center;
+    	align-items: center;
+    }
+  .tooltiip-1 .tooltiip-content .content {
+    width: 100%;
+  }
+  .tooltiip-2 .tooltiip-content .content {
+    width: 100%;
+  }
+  .tooltiip-3 .tooltiip-content .content {
+    width: 100%;
+  }
+  .tooltiip-4 .tooltiip-content .content {
+    width: 100%;
+  }
+  .tooltiip-5 .tooltiip-content .content {
+    width: 100%;
+  }
+  
+}

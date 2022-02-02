@@ -1,0 +1,368 @@
+/* tooltips **/ 
+  section {
+     user-select: none;
+     margin-top: 25px;
+    width: 100%;
+    /*display: grid;*/
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+    /*overflow-x: hidden;*/
+  }
+  @media (max-width: 768px){
+  	section {
+    	height: auto;
+      	grid-template-columns: 1fr;
+    }
+  }
+  .container {
+    
+    margin: 0 auto;
+    position: relative;
+  }
+  .container img {
+    height: 100%;
+    width: 100%;
+  }
+  .all-tooltiiip {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+  }
+  
+  .tooltiiip-content {
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 20px #00000020;
+    padding: 30px;
+    border-radius: 8px;
+    width: 90vw;
+    max-width: 300px;
+    opacity: 0;
+    pointer-events: none;
+    /* left: -50%; */
+    z-index: 2;
+  }
+  .tooltiiip-content .arrow {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border: 10px solid transparent;
+    border-bottom-color: rgb(255, 255, 255);
+    top: 0px;
+    left: 50%;
+    transform: translate(-50%, -100%) rotate(0deg);
+  }
+  .pin {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 80%;
+    height: 25px;
+    width: 25px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .pin:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    animation: puls-effect 1s ease infinite;
+  }
+  .tooltiiip.active .tooltiiip-content {
+    opacity: 1;
+    pointer-events: all;
+    display: block;
+  }
+  
+  /* Custom Style for tooltiiip-1 */
+  
+  .tooltiiip-1 .pin {
+    top: 37%; 
+    left: 70%;
+    height: 15px;
+    width: 15px;
+    background-color: rgb(255, 255, 255);
+  }
+  .tooltiiip-1 .tooltiiip-content {
+    display: flex;
+    max-width: 450px;
+    align-items: stretch;
+    justify-content: space-around;
+    padding: 0;
+    background-color: aliceblue;
+  }
+  .tooltiiip-1.active .tooltiiip-content {
+    display: flex;
+  }
+  .tooltiiip-1 .tooltiiip-content .img {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+  }
+  .tooltiiip-1 .tooltiiip-content .img > img {
+  	width: 100%;
+    height: auto;
+  }
+  .tooltiiip-1 .tooltiiip-content .content {
+    width: 50%;
+    padding: 20px;
+  }
+  .tooltiiip-1 .tooltiiip-content .content h1 {
+    font-size: 24px;
+  }
+  .tooltiiip-1 .tooltiiip-content .content p {
+    font-size: 14px;
+  }
+  /*.tooltiiip-1 .tooltiiip-content .content button {
+    font-family: "Montserrat";
+    font-size: 18px;
+    font-weight: 400;
+    border: none;
+    outline: none;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 4px;
+    box-shadow: 0px 0px 20px #00000020;
+  }*/
+  
+  /* custom style for tooltiiip-2 */
+  
+  .tooltiiip-2 .pin {
+    top: 80%;
+    left: 34%;
+    height: 15px;
+    width: 15px;
+  }
+  .tooltiiip-2 .tooltiiip-content {
+    display: flex;
+    max-width: 450px;
+    align-items: stretch;
+    justify-content: space-around;
+    padding: 0;
+    background-color: aliceblue;
+  }
+  .tooltiiip-2.active .tooltiiip-content {
+    display: flex;
+  }
+  .tooltiiip-2 .tooltiiip-content .img {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+  }
+  .tooltiiip-2 .tooltiiip-content .img > img {
+  	width: 100%;
+    height: auto;
+  }
+  .tooltiiip-2 .tooltiiip-content .content {
+    width: 50%;
+    padding: 20px;
+  }
+  .tooltiiip-2 .tooltiiip-content .content h1 {
+    font-size: 24px;
+  }
+  .tooltiiip-2.tooltiiip-content .content p {
+    font-size: 14px;
+  }
+  
+  /* Custom style for tooltiiip-3 */
+  
+  .tooltiiip-3 .pin {
+    top: 19%;
+    left: 45%;
+    height: 15px;
+    width: 15px;
+  }
+  
+  .tooltiiip-3 .tooltiiip-content {
+    display: flex;
+    max-width: 450px;
+    align-items: stretch;
+    justify-content: space-around;
+    padding: 0;
+    background-color: aliceblue;
+  }
+  .tooltiiip-3.active .tooltiiip-content {
+    display: flex;
+  }
+  .tooltiiip-3 .tooltiiip-content .img {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+  }
+  .tooltiiip-3 .tooltiiip-content .img > img {
+  	width: 100%;
+    height: auto;
+  }
+  .tooltiiip-3 .tooltiiip-content .content {
+    width: 50%;
+    padding: 20px;
+  }
+  .tooltiiip-3 .tooltiiip-content .content h1 {
+    font-size: 24px;
+  }
+  .tooltiiip-3.tooltiiip-content .content p {
+    font-size: 14px;
+  }
+  /* Custom style for tooltiiip-4 */
+  
+  .tooltiiip-4 .pin {
+    top: 60%;
+    left: 47%;
+    height: 15px;
+    width: 15px;
+  }
+  
+  .tooltiiip-4 .tooltiiip-content {
+    display: flex;
+    max-width: 450px;
+    align-items: stretch;
+    justify-content: space-around;
+    padding: 0;
+    background-color: aliceblue;
+  }
+  .tooltiiip-4.active .tooltiiip-content {
+    display: flex;
+  }
+  .tooltiiip-4 .tooltiiip-content .img {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+  }
+  .tooltiiip-4 .tooltiiip-content .img > img {
+  	width: 100%;
+    height: auto;
+  }
+  .tooltiiip-4 .tooltiiip-content .content {
+    width: 50%;
+    padding: 20px;
+  }
+  .tooltiiip-4 .tooltiiip-content .content h1 {
+    font-size: 24px;
+  }
+  .tooltiiip-4.tooltiiip-content .content p {
+    font-size: 14px;
+  }
+  
+  
+  /* Custom style for tooltiiip-5 */
+  
+  .tooltiiip-5 .pin {
+    top: 60%;
+    left: 11%;
+    height: 15px;
+    width: 15px;
+  }
+  
+  .tooltiiip-5 .tooltiiip-content {
+    display: flex;
+    max-width: 450px;
+    align-items: stretch;
+    justify-content: space-around;
+    padding: 0;
+    background-color: aliceblue;
+  }
+  .tooltiiip-5.active .tooltiiip-content {
+    display: flex;
+  }
+  .tooltiiip-5 .tooltiiip-content .img {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+  }
+  .tooltiiip-5 .tooltiiip-content .img > img {
+  	width: 100%;
+    height: auto;
+  }
+  .tooltiiip-5 .tooltiiip-content .content {
+    width: 50%;
+    padding: 20px;
+  }
+  .tooltiiip-5 .tooltiiip-content .content h1 {
+    font-size: 24px;
+  }
+  .tooltiiip-5.tooltiiip-content .content p {
+    font-size: 14px;
+  }
+  /* Puls Effect For Pins */
+  
+  @keyframes puls-effect {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(3);
+      opacity: 0;
+    }
+  }
+  
+  /* Media Query */
+  
+@media (max-width: 768px) {
+    .tooltiiip-content {
+      flex-direction: column;
+      width: 250px;
+    }
+    .tooltiiip-content .content,
+    .tooltiiip-content .img {
+      max-width: 100%;
+    }
+  .tooltiiip-1.active .tooltiiip-content{
+    	justify-content: center;
+    	align-items: center;
+    }
+  .tooltiiip-2.active .tooltiiip-content{
+    	justify-content: center;
+    	align-items: center;
+    }
+  .tooltiiip-3.active .tooltiiip-content{
+    	justify-content: center;
+    	align-items: center;
+    }
+  .tooltiiip-4.active .tooltiiip-content{
+    	justify-content: center;
+    	align-items: center;
+    }
+  .tooltiiip-5.active .tooltiiip-content{
+    	justify-content: center;
+    	align-items: center;
+    }
+  .tooltiiip-1 .tooltiiip-content .content {
+    width: 100%;
+  }
+  .tooltiiip-2 .tooltiiip-content .content {
+    width: 100%;
+  }
+  .tooltiiip-3 .tooltiiip-content .content {
+    width: 100%;
+  }
+  .tooltiiip-4 .tooltiiip-content .content {
+    width: 100%;
+  }
+  .tooltiiip-5 .tooltiiip-content .content {
+    width: 100%;
+  }
+  
+}
